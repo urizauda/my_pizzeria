@@ -1,0 +1,56 @@
+GET http://localhost:5000/products
+
+### 
+DELETE http://localhost:5000/products/61f67d53345720d27a6a11ed
+
+### 
+POST http://localhost:5000/products 
+content-Type: application/json
+
+{
+"id": 82,
+"name": "LG", "price": 999999, "description": "REYEYER", "category": "Laptops", "pics": ["https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537__340.jpg", "https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537__340.jpg"] }
+
+### 
+PATCH http://localhost:5000/products/61f67d53345720d27a6a11ed 
+Content-Type: application/json
+
+{ "name": "avi", "price": 11111111, "description": "wwwwwwwwww", "category": "Laptops", "pics": ["https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537__340.jpg", "https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537__340.jpg"]
+
+}
+
+### 
+GET http://localhost:5000/carts/61f7c8881132589f0ac6f36b
+
+###
+POST http://localhost:5000/carts 
+content-Type: application/json
+
+{"name": }
+
+### 
+PATCH http://localhost:5000/carts/add/61f7d3f51132589f0ac6f36c 
+Content-Type: application/json
+
+{
+"_id": "6188fe1cfc2a72ef5c713000"
+
+}
+
+### 
+PATCH http://localhost:5000/carts/delete/61f7d3f51132589f0ac6f36c 
+Content-Type: application/json
+
+{
+    "id": 1
+}
+
+###
+PATCH http://localhost:5000/carts/add/iEHRkWGkD7PU3Vn6TDF3SYrG5UA3 
+Content-Type: application/json
+
+{
+"_id": "iEHRkWGkD7PU3Vn6TDF3S"
+
+}
+###

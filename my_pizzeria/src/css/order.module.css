@@ -1,0 +1,27 @@
+
+.container {
+    margin-top: 5em;
+}
+
+.orderBtn {
+    border: none;
+    cursor: pointer;
+    color: green;
+    background-color: white;
+}
+
+.h2 {
+    margin-top: 5rem;
+    background-color: orangered;
+    color: white;
+}
+
+.content {
+    width: 65%;
+    text-align: center;
+    margin-left: 16%;
+}
+
+.p {
+    margin-top: 4rem;
+}

@@ -1,0 +1,743 @@
+[
+  {
+    "id": 1,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "DOMINIC",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/Dominic.png",
+    "size": "",
+    "description": "White sauce, asiago, fresh chopped basil, red onion, sliced tomatoes.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 2,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "MADDY",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/Maddy.png",
+    "size": "",
+    "description": "Classic cheese pizza.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 3,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "TRISTIAN",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza.png",
+    "size": "",
+    "description": "Mozzarella, asiago, roasted red peppers, mushrooms, pesto.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 4,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "LUCY SUNSHINE",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza1.png",
+    "size": "",
+    "description": "Mozzarella, parmesan, artichokes, garlic, dollops of red sauce.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 5,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "CALEXICO",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza2.png",
+    "size": "",
+    "description": "Mozzarella, gorgonzola, chicken, jalapenos, hot buffalo sauce, red sauce.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 6,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "DILLON JAMES",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza3.png",
+    "size": "",
+    "description": "Mozzarella, asiago, chopped basil, garlic, sliced tomatoes, red sauce.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 7,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "JASPER",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza4.png",
+    "size": "",
+    "description": "Mozzarella, mushrooms, spicy chicken sausage, red sauce.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 8,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "MAD DOG",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza5.png",
+    "size": "",
+    "description": "Mozzarella, black olives, pepper, mashrooms, tomato.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 9,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "PARADISE PIE",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza7.png",
+    "size": "",
+    "description": "Mozzarella and provolone cheese, alfredo sauce, mushrooms, spinach and Roma tomatoes.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 10,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "VEGGIE",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza8.png",
+    "size": "",
+    "description": "Vegetarian cheese, purple onion, green pepper, mashrooms, red pepper.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 11,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "BIG COUNTRY",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza11.png",
+    "size": "",
+    "description": "Mozzarella, cheddar cheese, roma tomatoes.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 12,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pizza",
+    "name": "MARGHEY",
+    "price": [10, 12, 14],
+    "img": "./img/products/pizza/pizza12.png",
+    "size": "",
+    "description": "Mozzarella, roma tomatoes, olive oil, garlic glaze.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 13,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pasta",
+    "name": "SPAGHECHEESE",
+    "price": [8],
+    "img": "./img/products/pasta/pasta1.png",
+    "size": "",
+    "description": "Spaghetti alla puttanesca Al dente.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 14,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pasta",
+    "name": "NOODCHIE",
+    "price": [8],
+    "img": "./img/products/pasta/pasta2.png",
+    "size": "",
+    "description": "Fried noodles Chow mein Peking duck Chinese cuisine.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 15,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pasta",
+    "name": "Crusted Pasta",
+    "price": [8],
+    "img": "./img/products/pasta/pasta3.png",
+    "size": "",
+    "description": "Spaghetti, tomato, chopped basil.",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 16,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "pasta",
+    "name": "SOUPEY",
+    "price": [8],
+    "img": "./img/products/pasta/pasta4.png",
+    "size": "",
+    "description": "Noodles soup, green pepper, red pepper, tomatos",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 17,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "salad",
+    "name": "Caesar",
+    "price": [4],
+    "img": "./img/products/salads/Caesar.png",
+    "size": "",
+    "description": "Romaine lettuce and croutons dressed with lemon juice, olive oil, egg, Worcestershire sauce, anchovies, garlic, Dijon mustard, Parmesan cheese, and black pepper",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 18,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "salad",
+    "name": "CYO Salad",
+    "price": [4],
+    "img": "./img/products/salads/CYO-Saald-Web.png",
+    "size": "",
+    "description": "salad with Mashrooms, Gamba Parmesan cheese and witloof",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 19,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "salad",
+    "name": "Italian Chop",
+    "price": [4],
+    "img": "./img/products/salads/Italian-Chop.png",
+    "size": "",
+    "description": "salad with Lettuce , black Olives, Red onion, Cherry tomatoes and Pearl mozzarella",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 20,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "salad",
+    "name": "Garden Salad",
+    "price": [4],
+    "img": "./img/products/salads/Garden-Salad.png",
+    "size": "",
+    "description": "salad with oil, Parmesan, vinegar, lemon juice, parsley, salt, pepper, Italian seasoning, and garlic",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 21,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "side dish",
+    "name": "Cheese Bread",
+    "price": [6],
+    "img": "./img/products/sideDish/cheeseBread.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 22,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "side dish",
+    "name": "Chilli Potatoes",
+    "price": [6],
+    "img": "./img/products/sideDish/potatos.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 23,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "side dish",
+    "name": "Garlic Bread",
+    "price": [6],
+    "img": "./img/products/sideDish/garlicBread.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 24,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "side dish",
+    "name": "Onion Rings",
+    "price": [6],
+    "img": "./img/products/sideDish/onionRings.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 25,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "side dish",
+    "name": "Ziva",
+    "price": [6],
+    "img": "./img/products/sideDish/ziva.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 26,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "deserts",
+    "name": "Belgian Waffles",
+    "price": [4],
+    "img": "./img/products/deserts/belgianWaffle.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 27,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "deserts",
+    "name": "Chocolate Sticks",
+    "price": [4],
+    "img": "./img/products/deserts/chocolateSticks.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 28,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "deserts",
+    "name": "Chocolate Ziva",
+    "price": [4],
+    "img": "./img/products/deserts/zivaCocolate.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 29,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "deserts",
+    "name": "Chocolate Fondant",
+    "price": [4],
+    "img": "./img/products/deserts/chocolateFondant.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 30,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "deserts",
+    "name": "Donuts",
+    "price": [4],
+    "img": "./img/products/deserts/donuts.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+
+  {
+    "id": 37,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "drinks",
+    "name": "Coca Cola",
+    "price": [2],
+    "img": "./img/products/drinks/coca-cola.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 38,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "drinks",
+    "name": "fanta",
+    "price": [2],
+    "img": "./img/products/drinks/fanta.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 39,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "drinks",
+    "name": "Fuze Tea",
+    "price": [2],
+    "img": "./img/products/drinks/fuzeTea.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 40,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "drinks",
+    "name": "Grapes",
+    "price": [2],
+    "img": "./img/products/drinks/grapes.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 41,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "drinks",
+    "name": "Orange",
+    "price": [2],
+    "img": "./img/products/drinks/orange.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 42,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "drinks",
+    "name": "Sprite",
+    "price": [2],
+    "img": "./img/products/drinks/sprite.jpg",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  },
+  {
+    "id": 43,
+    "sauces": [
+      { "name": "chocolate syrup", "value": false },
+      { "name": "thousand island dreesing", "value": false },
+      { "name": "garlic sauce", "value": false },
+      { "name": "ketchup", "value": false },
+      { "name": "mapel syrup", "value": false },
+      { "name": "pizza sauce", "value": false }
+    ],
+    "category": "drinks",
+    "name": "Water",
+    "price": [2],
+    "img": "./img/products/drinks/water.png",
+    "size": "",
+    "description": "",
+    "singlePizzaClick": false,
+    "addedToCart": false,
+    "totalPrice": 0
+  }
+]

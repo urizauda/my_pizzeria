@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 98%;
+    flex-flow: wrap;
+    margin-top: 2rem;
+}
+
+.content {
+    width: 30%;
+    justify-content: left;
+    margin-top: 5rem;
+}
+
+.img {
+    width: 40%;
+    justify-content: right;
+}
+
+h2 {
+    text-align: center;
+}
+
+.redBorderLine {
+    text-decoration:  solid underline red 3px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.deleteBtn {
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+
+.addBtn {
+    color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.pizzaSizeCheckbox {
+    margin-top: 0.5rem;
+}
+
+.pizzaSizeCheckbox input {
+    margin-left: 0.5rem;
+}
+
+.sauces input {
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+}
+
+.swal-title {
+    /* padding: ; */
+    color: white;
+}
