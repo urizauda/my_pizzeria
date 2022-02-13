@@ -52,7 +52,7 @@ export default function Cart({ auth, errorFromServer, setErrorFromServer, loadin
                         })}
                     </tbody>
                 </table>
-            </div>
+            </div><br></br>
             <div className={styles.buySection}>
                 <p className={styles.total}>Total: <span></span>{sum}$</p>
                 <button type='submit' title='Buy' className={styles.buyBtn} onClick={() => {

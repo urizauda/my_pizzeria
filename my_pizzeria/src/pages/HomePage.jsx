@@ -41,7 +41,7 @@ export default function HomePage() {
                     <div className={styles.rightBlockContainer}>
                         <img src='https://i.ibb.co/WcJbck8/2.png' alt='pizza' className={styles.rightPic} />
                         <div className={styles.leftContent}>
-                            <h1>MEET CALLIE</h1>
+                            <h1>MEET CALLIE</h1><br></br>
                             <p>Callie is our herb-seasoned winter pizza, featuring: white sauce, mozzarella, parmesan, chicken jalapeño sausage, mama lil's sweet hot peppas, roasted cauliflower, and rosemary.</p>
                             <br></br><br></br>
                             <div className={styles.goTo}>
@@ -53,7 +53,7 @@ export default function HomePage() {
                     <div className={styles.leftBlockContainer}>
                         <img src='https://i.ibb.co/qRPHPmn/3.png' alt='salad' className={styles.leftPic} />
                         <div className={styles.rightContent}>
-                            <h1>CAULIFLOWER POWER SALAD</h1>
+                            <h1>CAULIFLOWER POWER SALAD</h1><br></br>
                             <p>Packed with vitamins and nutrients to power you through the day. The Cauliflower Power Salad features spinach, kale & broccoli power blend, cucumbers, roasted cauliflower, cranberry seed mix, and Greek herb & tahini dressing. An excellent source of Fiber, Iron, Vitamin A, C, & K.</p>
                             <br></br><br></br>
                             <Link to='/Menu'>GO TO MENU <AiOutlineDoubleRight size={20} color={"lightgreen"} /></Link>
@@ -62,7 +62,7 @@ export default function HomePage() {
                     <div className={styles.rightBlockContainer}>
                         <img src='https://i.ibb.co/X3Q77C5/5.png' alt='waffle' className={styles.rightPicWaffle} />
                         <div className={styles.leftContent}>
-                            <h1>WHAT MAKES A WAFFLE BELGIAN?</h1>
+                            <h1>WHAT MAKES A WAFFLE BELGIAN?</h1><br></br>
                             <p>Our famous Belgian waffles are dusted with powdered sugar and served with warm maple syrup and melted butter on the site.</p>
                             <br></br><br></br>
                             <Link to='/Menu' className={styles.goToMenuLeft}>GO TO MENU <AiOutlineDoubleRight className={styles.goTo} size={20} color={"green"} /></Link>
@@ -72,7 +72,7 @@ export default function HomePage() {
                     <div className={styles.leftBlockContainer}>
                         <img src='https://i.ibb.co/NN1YL95/6.png' alt='pasta' className={styles.leftPicPasta} />
                         <div className={styles.rightContent}>
-                            <h1>COMFY AND CHEESY</h1>
+                            <h1>COMFY AND CHEESY</h1><br></br>
                             <p>This Parmesan-crusted pasta takes your basic pasta to the next level! This dish has everything you love about and more.</p>
                             <br></br><br></br>
                             <Link to='/Menu'>GO TO MENU <AiOutlineDoubleRight size={20} color={"lightgreen"} /></Link>
