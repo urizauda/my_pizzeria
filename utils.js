@@ -4,17 +4,18 @@ const mongoDB = require("mongodb");
 const MongoClient = mongoDB.MongoClient;
 const ObjectId = mongoDB.ObjectId;
 const mongoURL = process.env.MONGOURL;
-
-
+// const mongoURL = "mongodb://localhost:27017/"
+// console.log(RL);
 // <<<<---------------- PRODUCTS FUNCTIONS----------------->>>>>
 
 function getAllProducts(req, res) {
     MongoClient.connect(mongoURL, (err, db) => {
         if (err) throw err;
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("products").find({}).toArray((error, products) => {
             if (error) throw error;
             res.send(products);
+            console.log(".................");
             db.close();
         })
     })
@@ -26,7 +27,7 @@ function postNewProduct(req, res) {
     myObj.id = productId++;
     MongoClient.connect(mongoURL, (err, db) => {
         if (err) throw err;
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("products").insertOne(myObj, (error, product) => {
             if (error) throw error;
             res.send(product);
@@ -41,7 +42,7 @@ function updateProductByGivenId(req, res) {
         const myObj = req.body;
         const objId = { id: Number(req.params.id) };
         console.log(objId);
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("products").updateOne(objId, { $set: myObj }, (error, docs) => {
             if (error) throw error;
             console.log(docs);
@@ -54,7 +55,7 @@ function updateProductByGivenId(req, res) {
 function deleteProductById(req, res) {
     MongoClient.connect(mongoURL, (err, db) => {
         if (err) throw err;
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("products").findOneAndDelete({ _id: ObjectId(req.params.id) }), (error, product) => {
             if (error) throw error;
             res.sendStatus(200);
@@ -70,7 +71,7 @@ function getCartById(req, res) {
     console.log(req.params);//{localId:gyhyuhjuij}
     MongoClient.connect(mongoURL, (err, db) => {
         if (err) throw err;
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("carts").find(req.params).toArray((error, product) => {
             if (error) throw error;
             res.send(product);
@@ -84,7 +85,7 @@ function addToCart(req, res) {
         if (err) throw err;
         const myObj = req.body;
         const objId = { localId: req.params.localId };
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("carts").updateOne(objId, { $push: { products: myObj } }, (error, docs) => {
             if (error) throw error;
             res.send(docs);
@@ -98,7 +99,7 @@ function deleteFromCart(req, res) {
         if (err) throw err;
         const myObj = req.body;
         const objId = { localId: req.params.localId };
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("carts").updateOne(objId, { $pull: { products: myObj } }, (error, docs) => {
             if (error) throw error;
             res.send(docs);
@@ -113,7 +114,7 @@ function postNewCart(req, res) {
     // res.send("ok")
     MongoClient.connect(mongoURL, (err, db) => {
         if (err) throw err;
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("carts").insertOne(myObj, (error, product) => {
             if (error) throw error;
             res.send(product);
@@ -127,7 +128,7 @@ function postNewCart(req, res) {
 function getSliderImages(req, res) {
     MongoClient.connect(mongoURL, (err, db) => {
         if (err) throw err;
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("image_slider").find({}).toArray((error, products) => {
             if (error) throw error;
             res.send(products);
@@ -142,7 +143,7 @@ function getSliderImages(req, res) {
 //     const myObj = req.body;
 //     MongoClient.connect(mongoURL, (err, db) => {
 //         if (err) throw err;
-//         const dbo = db.db("myPizzeria");
+//         const dbo = db.db("my-pizzeria");
 //         dbo.collection("orders").insertOne(myObj, (error, product) => {
 //             if (error) throw error;
 //             res.send(product);
@@ -156,7 +157,7 @@ function addOrder(req, res) {
         if (err) throw err;
         const myObj = req.body;
         const objId = { localId: req.params.localId };
-        const dbo = db.db("myPizzeria");
+        const dbo = db.db("my-pizzeria");
         dbo.collection("orders").insertOne((myObj), (error, docs) => {
             if (error) throw error;
             res.send(docs);

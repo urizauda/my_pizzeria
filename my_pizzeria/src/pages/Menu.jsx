@@ -16,7 +16,6 @@ export default function Menu({ products, setProducts, auth }) {
     return (
         <div>
             <br></br>
-            {/* <h1 className={styles.menuH1}>Our Menu</h1> */}
     
             <div className={styles.links}>
                 <a href="#pizzaMenu">Pizzas</a>

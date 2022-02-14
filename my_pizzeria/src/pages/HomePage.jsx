@@ -10,7 +10,7 @@ export default function HomePage() {
 
     function getSlider() {
         axios
-              .get('/image_slider')
+            .get('/image_slider')
             .then(function (response) {
                 setImage(response.data)
             })
@@ -18,18 +18,33 @@ export default function HomePage() {
                 console.log(error);
             })
     }
+
+    const data = Array.isArray(image)
+        ? image.map((img, i) => {
+            return (
+                <figure key={i}>
+                    <img src={img.img} />
+                </figure>
+            )
+        }) : []
+
+        console.log(data);
+
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.slider}>
                     <br></br>
-                    {image.map((img, i) => {
-                    return (
-                        <figure key={i}>
-                            <img src={img.img} />
-                        </figure>
-                    )
-                })}
+                    <div>
+                        {data}
+                    </div>
+                    {/* {image.map((img, i) => {
+                        return (
+                            <figure key={i}>
+                                <img src={img.img} />
+                            </figure>
+                        )
+                    })} */}
                 </div>
                 <br></br>
                 <h1>EXCLUSIVELY FRESH INGREDIENTS</h1>
@@ -45,7 +60,7 @@ export default function HomePage() {
                             <p>Callie is our herb-seasoned winter pizza, featuring: white sauce, mozzarella, parmesan, chicken jalapeño sausage, mama lil's sweet hot peppas, roasted cauliflower, and rosemary.</p>
                             <br></br><br></br>
                             <div className={styles.goTo}>
-                            <Link to='/Menu' className={styles.goToMenuLeft}>GO TO MENU <AiOutlineDoubleRight size={20} color={"green"} /></Link>
+                                <Link to='/Menu' className={styles.goToMenuLeft}>GO TO MENU <AiOutlineDoubleRight size={20} color={"green"} /></Link>
                             </div>
                         </div>
                     </div>

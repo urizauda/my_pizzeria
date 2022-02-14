@@ -15,20 +15,35 @@ export default function CartSingleProduct({ auth, product, i, total, setCart, ne
             .catch(error => console.log(error.response))
     }
 
+    const saucesData = Array.isArray(saucesArray)
+? saucesArray.map((sauce, k) => {
+    if (sauce.value) {
+        return (
+            <ul key={k}>
+                <li>{sauce.name}</li>
+            </ul>
+        )
+    }
+}) : []
+
     return (
         <tr key={i} className={styles.tr}>
             <td><img src={product.img} className={styles.img} /></td>
             <td>{product.name}</td>
             <td>{product.size ? product.size : "small"}</td>
-            <td>{saucesArray.length ? saucesArray.map((sauce, k) => {
-                if (sauce.value) {
-                    return (
-                        <ul key={k}>
-                            <li>{sauce.name}</li>
-                        </ul>
-                    )
-                }
-            }) : <td>-</td>}</td>
+            <td>{saucesArray.length ?
+             <div>{saucesData}</div>
+            // saucesArray.map((sauce, k) => {
+            //     if (sauce.value) {
+            //         return (
+            //             <ul key={k}>
+            //                 <li>{sauce.name}</li>
+            //             </ul>
+            //         )
+            //     }
+            // }) : <td>-</td>}
+            : []} 
+            </td>
             <td className={styles.price}>{product.price[0]}$</td>
             <td><input className={styles.quantity} ref={inputRef} type='number' defaultValue={1} min={1} onChange={() => {
                 product.totalPrice = total + (Number(product.price[0]) * Number(inputRef.current.value))

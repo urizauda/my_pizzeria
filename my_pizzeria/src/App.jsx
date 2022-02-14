@@ -39,6 +39,7 @@ function App() {
       .get('/products')
       .then(function (response) {
         setProducts(response.data)
+        console.log(response.data);
         setLoading(false)
       })
       .catch(function (error) {

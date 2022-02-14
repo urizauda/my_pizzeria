@@ -29,6 +29,14 @@ export default function Cart({ auth, errorFromServer, setErrorFromServer, loadin
 
     let sum = 0
 
+    const cartData = Array.isArray(newCart)
+    ? newCart.map((product, i) => {
+        sum += newCart[i].totalPrice
+        return (
+            <CartSingleProduct key={i} auth={auth} newCart={newCart} setCartTotal={setCartTotal} cartTotal={cartTotal} setCart={setCart} product={product} i={i} total={total} setTotal={setTotal} setCounter={setCounter} counter={counter} />
+        )
+    }) : []
+
     return (
         <div>
             <div className={styles.container}>
@@ -44,12 +52,13 @@ export default function Cart({ auth, errorFromServer, setErrorFromServer, loadin
                             <th>Total</th>
                             <th>Remove</th>
                         </tr>
-                        {newCart.map((product, i) => {
+                        <div>{cartData}</div>
+                        {/* {newCart.map((product, i) => {
                             sum += newCart[i].totalPrice
                             return (
                                 <CartSingleProduct key={i} auth={auth} newCart={newCart} setCartTotal={setCartTotal} cartTotal={cartTotal} setCart={setCart} product={product} i={i} total={total} setTotal={setTotal} setCounter={setCounter} counter={counter} />
                             )
-                        })}
+                        })} */}
                     </tbody>
                 </table>
             </div><br></br>

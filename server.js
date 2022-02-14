@@ -1,12 +1,16 @@
 console.log("app is loading");
 const express = require("express");
 const app = express();
+const cors = require("cors")
 const utils = require("./utils");
+const path = require("path")
+
 const basicRouteProducts = "/products";
 const basicRouteCarts = "/cart";
 const basicRouteSlider = "/image_slider";
 const basicRouteOrders = "/orders";
 
+app.use(cors());
 app.use(express.json());
 
 // <<<<---------------- PRODUCTS ----------------->>>>>
@@ -67,10 +71,13 @@ app.get(`${basicRouteSlider}`, (req, res) => {
 
 
 
+app.use(express.static(path.join(path.join(__dirname, "my_pizzeria" , "build"))));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "my_pizzeria", "build", "build", "index.html"))
+})
 
 
-
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
 });
