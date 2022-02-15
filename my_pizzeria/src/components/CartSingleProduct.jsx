@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import { GiTrashCan } from 'react-icons/gi';
@@ -6,7 +6,7 @@ import styles from '../css/cart.module.css'
 
 export default function CartSingleProduct({ auth, product, i, total, setCart, newCart, setCounter, counter }) {
     const inputRef = useRef(1)
-
+    
     let saucesArray = [...product.sauces]
 
     function deleteProductFromCart(i) {
