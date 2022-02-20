@@ -4,17 +4,14 @@
   "description": "",
   "main": "server.js",
   "type": "module",
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
     "my_pizzeria": "npm run start --prefix my_pizzeria",
     "dev": "concurrently \"npm run server\" \"npm run my_pizzeria\" ",
-    "client-install": "cd client && npm install",
-    "client-build": "cd client && npm build",
+    "client-install": "cd my_pizzeria && npm install",
+    "client-build": "cd my_pizzeria && npm build",
     "heroku-postbuild": "npm run client-install && npm run client-build"
   },
   "keywords": [],

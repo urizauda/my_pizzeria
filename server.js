@@ -1,4 +1,6 @@
 console.log("app is loading");
+import dotenv from 'dotenv'
+dotenv.config()
 // const express = require("express");
 import express from "express";
 const app = express();
