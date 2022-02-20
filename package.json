@@ -14,7 +14,7 @@
     "my_pizzeria": "npm run start --prefix my_pizzeria",
     "dev": "concurrently \"npm run server\" \"npm run my_pizzeria\" ",
     "client-install": "cd my_pizzeria && npm install",
-    "client-build": "cd my_pizzeria && npm build",
+    "client-build": "cd my_pizzeria && npm run build",
     "heroku-postbuild": "npm run client-install && npm run client-build"
   },
   "keywords": [],
