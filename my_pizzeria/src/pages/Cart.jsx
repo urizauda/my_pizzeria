@@ -38,11 +38,11 @@ export default function Cart({ auth, errorFromServer, setErrorFromServer, loadin
     }) : []
 
     return (
-        <div>
+        <div className={styles.father}>
             <div className={styles.container}>
                 <table className={styles.tableContainer}>
                     <tbody>
-                        <tr className={styles.tr}>
+                        <tr className={styles.trow}>
                             <th>Image</th>
                             <th>Name</th>
                             <th>Size</th>
@@ -52,7 +52,7 @@ export default function Cart({ auth, errorFromServer, setErrorFromServer, loadin
                             <th>Total</th>
                             <th>Remove</th>
                         </tr>
-                        <div>{cartData}</div>
+                        <>{cartData}</>
                         {/* {newCart.map((product, i) => {
                             sum += newCart[i].totalPrice
                             return (
@@ -63,15 +63,15 @@ export default function Cart({ auth, errorFromServer, setErrorFromServer, loadin
                 </table>
             </div><br></br>
             <div className={styles.buySection}>
-                <p className={styles.total}>Total: <span></span>{sum}$</p>
+                <p className={styles.total}>Total: <span></span>{sum}$
                 <button type='submit' title='Buy' className={styles.buyBtn} onClick={() => {
                     setIsOpen(true);
                     setCounter(null)
-                }}>Checkout</button>
+                }}>Checkout</button></p>
             </div><br></br><br></br>
             <div className={styles.orderConfirmation}>
                 <Modal open={isOpen} sum={sum} onClose={() => setIsOpen(false)}>
-                    <Order />
+                    <Order setCounter={setCounter} />
                     <br></br>
                     <p className={styles.price}>Price: {sum}$</p>
                     <br></br>

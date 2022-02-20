@@ -1,6 +1,9 @@
-require("dotenv").config()
-const { send } = require("express/lib/response");
-const mongoDB = require("mongodb");
+// require("dotenv").config()
+import dotenv from 'dotenv'
+dotenv.config()
+// const { send } = require("express/lib/response");
+// const mongoDB = require("mongodb");
+import mongoDB from 'mongodb'
 const MongoClient = mongoDB.MongoClient;
 const ObjectId = mongoDB.ObjectId;
 const mongoURL = process.env.MONGOURL;
@@ -166,7 +169,7 @@ function addOrder(req, res) {
     })
 }
 
-module.exports = {
+export {
     getAllProducts,
     deleteProductById,
     postNewProduct,

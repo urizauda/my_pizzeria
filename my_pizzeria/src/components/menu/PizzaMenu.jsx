@@ -41,7 +41,7 @@ export default function PizzaMenu({ products, setProducts, redirect, setRedirect
             {redirect ? <Redirect to='/SingleProduct' /> : ""}
             <h1 className={styles.menuH1}>Pizzas</h1>
             <div className={styles.categoryHolder}>
-                <div>{pizzaData}</div>
+                <>{pizzaData}</>
                 {/* {pizzaArray.map((pizza, i) => {
                     if (pizzaArray[i].category === "pizza") {
                         return (

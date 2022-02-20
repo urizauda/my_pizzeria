@@ -19,7 +19,7 @@ export default function About() {
                     We currently convey to you a pizza hand moved with exactness, flooding with cheddar and stacked with your most loved fixings! Thus, get your ‘MY-PIZZERIA’ conveyed to your doorstep and appreciate a warm box of goodness.
                 </p>
             </div>
-            <br></br><br></br><br></br>
+            <br></br><br></br>
         </div>
     )
 }

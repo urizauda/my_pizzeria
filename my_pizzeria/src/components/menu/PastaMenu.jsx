@@ -37,7 +37,7 @@ export default function PastaMenu({ products, setProducts, redirect, setRedirect
             {redirectToLogin ? <Redirect to='/Login' /> : null}
             {redirect ? <Redirect to='/SingleProduct' /> : ""}
             <div className={styles.categoryHolder}>
-                <div>{pastaData}</div>
+                <>{pastaData}</>
                 {/* {pastasArray.map((pasta, i) => {
                     if (pastasArray[i].category === "pasta") {
                         return (

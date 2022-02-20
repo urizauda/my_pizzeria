@@ -37,7 +37,7 @@ export default function SaladMenu({ products, setProducts, redirect, setRedirect
             {redirectToLogin ? <Redirect to='/Login' /> : null}
             <h1 className={styles.menuH1}>Salads</h1>
             <div className={styles.categoryHolder}>
-                <div>{saladsData}</div>
+                <>{saladsData}</>
                 {/* {saladsArray.map((salad, i) => {
                     if (saladsArray[i].category === "salad") {
                         return (

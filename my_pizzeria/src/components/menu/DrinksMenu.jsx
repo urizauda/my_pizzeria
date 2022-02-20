@@ -36,7 +36,7 @@ export default function DrinksMenu({ products, setProducts, redirect, setRedirec
             {redirect ? <Redirect to='/SingleProduct' /> : ""}
             <h1 className={styles.menuH1}>Drinks</h1>
             <div className={styles.categoryHolder}>
-                <div>{drinksData}</div>
+                <>{drinksData}</>
                 {/* {drinksArray.map((drink, i) => {
                     if (drinksArray[i].category === "drinks") {
                         return (

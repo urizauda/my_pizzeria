@@ -1,16 +1,28 @@
 .container {
-    margin-left: 3rem;
-    border-bottom: 2px solid grey;
-    width: 60rem;
+    margin-left: 15rem;
+    width: 56rem;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.father {
+    height: 77vh;
+}
+
+.tr {
+    border-radius: 10px;
 }
 
 th {
-    border-bottom: 2px solid grey;
-
+    background-color: gray;
+    color: white;
+    width: 100%;
 }
 
 th, td {
     padding: 1.5rem;
+    border-bottom: 1px solid gray;
 }
 
 .img {
@@ -35,6 +47,7 @@ span {
     color: red;
     border: none;
     cursor: pointer;
+    background-color: white;
 }
 
 .buyBtn {
@@ -54,18 +67,26 @@ span {
     -webkit-user-select: none;
     touch-action: manipulation;
     margin-top: 2rem;
+    margin-left: 2rem;
 }
 
 .tableContainer {
-    margin-top: 3rem;
+    margin-top: 5rem;
+    border-collapse: collapse;
+    border-radius: 10px;
+    align-items: center;
 }
 
 .price {
     font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
-table {
-    width: 20rem;
+.total {
+    margin-left: 8rem;
 }
+
+@media screen and (max-width: 768px) {
+    table {
+        width: 20rem;
+    }
 }

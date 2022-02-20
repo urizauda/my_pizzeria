@@ -38,7 +38,7 @@ export default function DesertsMenu({ products, setProducts, redirect, setRedire
             {redirect ? <Redirect to='/SingleProduct' /> : ""}
             <h1 className={styles.menuH1}>Deserts</h1>
             <div className={styles.categoryHolder}>
-                <div>{desertsData}</div>
+                <>{desertsData}</>
                 {/* {desertsArray.map((desert, i) => {
                     if (desertsArray[i].category === "deserts") {
                         return (

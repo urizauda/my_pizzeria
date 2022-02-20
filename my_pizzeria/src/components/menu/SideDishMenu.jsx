@@ -37,7 +37,7 @@ export default function SideDishMenu({ products, setProducts, redirect, setRedir
             {redirect ? <Redirect to='/SingleProduct' /> : ""}
             <h1 className={styles.menuH1}>Sides</h1>
             <div className={styles.categoryHolder}>
-                <div>{sideDishesData}</div>
+                <>{sideDishesData}</>
                 {/* {sideDishesArray.map((sideDish, i) => {
                     if (sideDishesArray[i].category === "side dish") {
                         return (
