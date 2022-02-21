@@ -92,12 +92,6 @@ app.get(`${basicRouteSlider}`, (req, res) => {
 })
 
 
-
-// app.use(express.static(path.join(path.join(__dirname, "my_pizzeria" , "build"))));
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "my_pizzeria", "build", "build", "index.html"))
-// })
-
 app.use(express.static(path.join(__dirname, "my_pizzeria", "build")));
 app.get("*", (req, resp) => {
   resp.sendFile(path.join(__dirname, "my_pizzeria", "build", "index.html"));
