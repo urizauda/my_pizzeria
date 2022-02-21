@@ -2,13 +2,13 @@ import React from 'react'
 import { Redirect } from 'react-router-dom';
 import axios from 'axios'
 import { SpinnerCircular } from "spinners-react";
-import { API_KEY } from '../logic/keys.js'
+import keys from '../logic/keys'
 import styles from '../css/loginRegister.module.css'
 
 export default function Login({ setAuth, errorFromServer, setErrorFromServer, loading, setLoading, email, setEmail, password, setPassword, redirect, setRedirect }) {
 
     const logIn = () => {
-        const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`;
+        const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${keys}`;
         setLoading(true)
         axios
             .post(url, {

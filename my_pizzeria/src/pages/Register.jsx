@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from "axios";
 import { SpinnerCircular } from "spinners-react";
-import { API_KEY } from "../logic/keys.js";
+import keys from "../logic/keys";
 import styles from '../css/loginRegister.module.css'
 
 export default function Register({ setAuth, errorFromServer, setErrorFromServer, loading, setLoading, email, setEmail, password, setPassword, redirect, setRedirect }) {
     const [confirmPassword, setConfirmPassword] = useState(false);
 
     const register = () => {
-        const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
+        const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${keys}`;
         setLoading(true)
         axios
             .post(url, {
