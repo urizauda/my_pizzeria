@@ -1,6 +1,6 @@
 // require("dotenv").config()
-// import dotenv from 'dotenv'
-// dotenv.config()
+import dotenv from 'dotenv'
+dotenv.config()
 // const { send } = require("express/lib/response");
 // const mongoDB = require("mongodb");
 import mongoDB from 'mongodb'
