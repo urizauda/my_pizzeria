@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from "axios";
 import { SpinnerCircular } from "spinners-react";
-import keys from "../logic/keys";
+import keys from "../logic/keys.js";
 import styles from '../css/loginRegister.module.css'
 
 export default function Register({ setAuth, errorFromServer, setErrorFromServer, loading, setLoading, email, setEmail, password, setPassword, redirect, setRedirect }) {
