@@ -18,7 +18,8 @@ button {
 nav {
   margin: 0;
   padding: 0;
-  background-color: orangered;
+  /* background-color: rgb(240, 79, 21); */
+  background: linear-gradient(rgb(241, 107, 58), #fa5007c9);
   width: 100%;
   height: 10vh;
   display: flex;
@@ -30,8 +31,8 @@ nav {
 .nav a {
   color: white;
   text-decoration: none;
-  font-size: large;
-  font-weight: bold;
+  /* font-size: large; */
+  /* font-weight: bold; */
   margin-top: 2%;
 }
 
@@ -43,6 +44,9 @@ nav {
 .cartLogo {
   display: flex;
   position: relative;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2%;
 }
 
 .counter {
@@ -56,7 +60,7 @@ nav {
   align-items: center;
   z-index: 1;
   width: 80%;
-  top: 20%;
+  bottom: 80%;
   left: 80%;
 }
 
@@ -64,7 +68,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
 }
 
 h1 {
@@ -72,10 +75,17 @@ h1 {
 }
 
 .logOut {
-  background-color: orangered;
+  /* background-color: orangered; */
+  background-color:rgba(255, 0, 0, 0); 
   color: white;
   border: none;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin-top: 1%;
+}
+
+.logOut:hover {
+  border-bottom: 4px solid black;
+  color: rgb(110, 0, 0);
 }
 
 .logOut:hover {

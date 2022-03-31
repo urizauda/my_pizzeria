@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Link, Route, Switch} from 'react-router-dom'
+import { BrowserRouter, Link, Route, Switch, Redirect } from 'react-router-dom'
 import axios from 'axios'
-import { FaPowerOff, FaShoppingCart } from "react-icons/fa"
+import { FaSignOutAlt, FaShoppingCart } from "react-icons/fa"
 import { SpinnerCircular } from "spinners-react";
 import HomePage from './pages/HomePage'
 import Menu from './pages/Menu'
@@ -19,34 +19,32 @@ function App() {
   const [auth, setAuth] = useState(null);
   const [products, setProducts] = useState([])
   const [redirect, setRedirect] = useState(false)
-  const [errorFromServer, setErrorFromServer] = useState(false)
+  const [errorFromServer, setErrorFromServer] = useState("")
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  const [counter, setCounter] = useState(null)
+  const [counter, setCounter] = useState(0)
+
+  const userDetail = localStorage.getItem("storage")
 
   useEffect(() => {
-    getData()
-    let userDetail = localStorage.getItem("storage")
-    if (userDetail) {
-      setAuth(JSON.parse(userDetail))
-    }
+    setAuth(JSON.parse(userDetail) ? JSON.parse(userDetail) : null);
   }, [])
 
-  function getData() {
+  useEffect(() => {
+    if (!userDetail) return;
+    getCounter()
+  }, [auth])
+
+  function getCounter() {
     setLoading(true)
     axios
-      .get('/products')
-      .then(function (response) {
-        setProducts(response.data)
-        console.log(response.data);
+      .get(`/cart/${auth?.localId}`)
+      .then((response) => {
+        setCounter(response.data[0]?.products.length)
         setLoading(false)
       })
-      .catch(function (error) {
-        console.log(error);
-        setErrorFromServer(error)
-        setLoading(false)
-      })
+      .catch((error) => { setErrorFromServer(error) })
   }
 
   return (
@@ -58,8 +56,8 @@ function App() {
               <Link to='/'>Home Page</Link>
               <Link to='/Menu'>Menu</Link>
               <Link to='/About'>About</Link>
-              <div className='cartLogo'><div className='counter'>{counter}</div><Link to='/Cart'><FaShoppingCart className='faShoppingCart' title='Go to Cart' size={25} /></Link></div>
-              {<button className='logOut' title='Log out' onClick={() => { setAuth(null); localStorage.clear() }}><FaPowerOff /></button>}
+              <div className='cartLogo'><div className='counter'>{counter ? counter : ""}</div><Link to='/Cart'><FaShoppingCart className='faShoppingCart' title='Go to Cart' size={23} /></Link></div>
+              {<button className='logOut' title='Sign out' onClick={() => { setAuth(null); localStorage.clear() }}><FaSignOutAlt size={23} /></button>}
             </>
             :
             <>
@@ -72,20 +70,21 @@ function App() {
         </nav>
         <br></br><br></br>
         <Switch>
-          <Route exact path="/" render={() => <HomePage />} />
-          <Route exact path="/Menu" render={() => <Menu products={products} auth={auth} setAuth={setAuth} setProducts={setProducts} />} />
-          <Route exact path="/Register" render={() => <Register setAuth={setAuth} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} email={email} setEmail={setEmail} password={password} setPassword={setPassword} redirect={redirect} setRedirect={setRedirect} />} />
-          <Route exact path="/Login" render={() => <Login products={products} setAuth={setAuth} setProducts={setProducts} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} email={email} setEmail={setEmail} password={password} setPassword={setPassword} redirect={redirect} setRedirect={setRedirect} />} />
+          <Route exact path="/" render={() => <HomePage errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} />} />
+          <Route exact path="/Menu" render={() => <Menu setErrorFromServer={setErrorFromServer} setLoading={setLoading} products={products} auth={auth} setAuth={setAuth} setProducts={setProducts} />} />
+          <Route exact path="/Register" render={() => <Register counter={counter} setAuth={setAuth} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} email={email} setEmail={setEmail} password={password} setPassword={setPassword} redirect={redirect} setRedirect={setRedirect} />} />
+          <Route exact path="/Login" render={() => <Login counter={counter} setCounter={setCounter} products={products} setAuth={setAuth} setProducts={setProducts} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} email={email} setEmail={setEmail} password={password} setPassword={setPassword} redirect={redirect} setRedirect={setRedirect} />} />
           <Route exact path="/About" render={() => <About />} />
-          <Route exact path="/Cart" render={() => <Cart products={products} setProducts={setProducts} auth={auth} setAuth={setAuth} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} redirect={redirect} setRedirect={setRedirect}  setCounter={setCounter} counter={counter}/>} />
+          <Route exact path="/Cart" render={() => <Cart products={products} setProducts={setProducts} auth={auth} setAuth={setAuth} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} redirect={redirect} setRedirect={setRedirect} setCounter={setCounter} counter={counter} />} />
           <Route exact path="/Order" render={() => <Order auth={auth} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} />} />
           <Route exact path="/SingleProduct" render={() => <SingleProduct counter={counter} setCounter={setCounter} auth={auth} products={products} setProducts={setProducts} />} />
+          {loading ? <SpinnerCircular color="black" /> : ""}
+          <p style={{ color: "red" }}>{errorFromServer ? "Error From Server" : ""}</p>
+          {redirect ? <Redirect to='/' /> : ""}
         </Switch>
-        {loading ? <SpinnerCircular color="blue" /> : ""}
-        <p style={{ color: "red" }}>{errorFromServer ? "Error From Server" : ""}</p>
-      </div><Footer />
+      </div>
+      <Footer />
     </BrowserRouter>
-
   )
 }
 

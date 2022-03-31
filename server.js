@@ -1,12 +1,9 @@
 console.log("app is loading");
 import dotenv from 'dotenv'
 dotenv.config()
-// const express = require("express");
 import express from "express";
 const app = express();
-// const cors = require("cors")
 import cors from 'cors'
-// const utils = require("./utils");
 import {
     getAllProducts,
     deleteProductById,
@@ -19,7 +16,7 @@ import {
     postNewCart,
     addOrder
 } from './utils.js'
-// const path = require("path")
+
 import path from 'path'
 import { dirname } from 'path';
 
@@ -85,7 +82,7 @@ app.post(`${basicRouteOrders}`, (req, res) => {
     addOrder(req, res);
 })
 
-//--------------------------------------------------------
+//------------------------------------------------------------------------------------
 // get slider images
 app.get(`${basicRouteSlider}`, (req, res) => {
     getSliderImages(req, res);

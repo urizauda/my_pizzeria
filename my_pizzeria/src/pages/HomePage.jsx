@@ -2,24 +2,25 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { AiOutlineDoubleRight } from "react-icons/ai";
+import { SpinnerCircular } from "spinners-react";
 import styles from '../css/homePage.module.css'
 
-export default function HomePage() {
+export default function HomePage({ errorFromServer, setErrorFromServer, loading, setLoading }) {
     const [image, setImage] = useState([])
     useEffect(getSlider, [])
 
     function getSlider() {
+        setLoading(true)
         axios
             .get('/image_slider')
             .then(function (response) {
                 setImage(response.data)
+                setLoading(false)
             })
-            .catch(function (error) {
-                console.log(error);
-            })
+            .catch(function (error) { setErrorFromServer(error); setLoading(false) })
     }
 
-    const data = Array.isArray(image)
+    const sliderData = Array.isArray(image)
         ? image.map((img, i) => {
             return (
                 <figure key={i}>
@@ -28,23 +29,15 @@ export default function HomePage() {
             )
         }) : []
 
-        console.log(data);
-
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.slider}>
                     <br></br>
-                    <div>
-                        {data}
-                    </div>
-                    {/* {image.map((img, i) => {
-                        return (
-                            <figure key={i}>
-                                <img src={img.img} />
-                            </figure>
-                        )
-                    })} */}
+                    <>{sliderData}</>
+                    <br></br>
+                    {loading ? <SpinnerCircular className={styles.spinner} color='black' /> : ""}
+                    <p style={{ color: "red" }}>{errorFromServer ? "Error From Server" : ""}</p>
                 </div>
                 <br></br>
                 <h1>EXCLUSIVELY FRESH INGREDIENTS</h1>

@@ -6,8 +6,13 @@
     align-items: center;
 }
 
+.spinner {
+    margin-left: 185%;
+}
+
 .father {
     height: 77vh;
+    /* width: 50rem; */
 }
 
 .tr {

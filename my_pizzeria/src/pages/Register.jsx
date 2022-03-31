@@ -19,16 +19,17 @@ export default function Register({ setAuth, errorFromServer, setErrorFromServer,
             })
             .then(function (response) {
                 setLoading(false)
-                setErrorFromServer(false);
                 setAuth(response.data)
                 console.log(response)
                 localStorage.setItem("storage", JSON.stringify(response.data))
                 craeteCart(response.data.localId)
             })
             .catch(function (error) {
-                setErrorFromServer(error);
+                const errorMessage = error.response.data.error.message
+                setErrorFromServer(errorMessage);
                 setLoading(false)
                 console.log(error);
+                console.log(errorMessage);
             });
     };
 
@@ -36,6 +37,7 @@ export default function Register({ setAuth, errorFromServer, setErrorFromServer,
         const url = "/cart"
         axios.post(url, {
             localId,
+            counter: 0,
             products: [],
         })
             .then(response => {
@@ -77,7 +79,7 @@ export default function Register({ setAuth, errorFromServer, setErrorFromServer,
                     </form>
                     {loading ? <SpinnerCircular color="orangred" /> : ""}
                     <p style={{ color: "red" }}>
-                        {errorFromServer ? "Error From Server" : ""}
+                        {errorFromServer ? errorFromServer : ""}
                     </p>
                 </div>
             </div>

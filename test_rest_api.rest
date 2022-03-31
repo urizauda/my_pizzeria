@@ -20,10 +20,10 @@ Content-Type: application/json
 }
 
 ### 
-GET http://localhost:5000/carts/61f7c8881132589f0ac6f36b
+GET http://localhost:5000/cart/OlhiqsNVQ0WeK4pfBKJ63xgWVQG2
 
 ###
-POST http://localhost:5000/carts 
+POST http://localhost:5000/carts
 content-Type: application/json
 
 {"name": }
@@ -46,11 +46,12 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:5000/carts/add/iEHRkWGkD7PU3Vn6TDF3SYrG5UA3 
+PATCH http://localhost:5000/cart/add/mLnk4Ak0nFRAZQyoMbhSs2B0CD42 
 Content-Type: application/json
 
 {
-"_id": "iEHRkWGkD7PU3Vn6TDF3S"
+"id": "2",
+"counter": 9
 
 }
 ###

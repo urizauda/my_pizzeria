@@ -5,7 +5,7 @@ import { SpinnerCircular } from "spinners-react";
 import keys from '../logic/keys.js'
 import styles from '../css/loginRegister.module.css'
 
-export default function Login({ setAuth, errorFromServer, setErrorFromServer, loading, setLoading, email, setEmail, password, setPassword, redirect, setRedirect }) {
+export default function Login({ counter, setAuth, errorFromServer, setErrorFromServer, loading, setLoading, email, setEmail, password, setPassword, redirect, setRedirect }) {
 
     const logIn = () => {
         const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${keys}`;
@@ -20,7 +20,10 @@ export default function Login({ setAuth, errorFromServer, setErrorFromServer, lo
                 setLoading(false)
                 setAuth(response.data)
                 localStorage.setItem("storage", JSON.stringify(response.data))
+                localStorage.setItem("cartCounter", counter)
+               
             })
+            
             .catch(function (error) { setErrorFromServer(error); setLoading(false) })
     }
 
