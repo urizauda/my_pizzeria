@@ -28,6 +28,8 @@ It's summarized the technologies, skills and technuiqes i've learned during this
 - Register
 - Login
 - Home page
+![homePage](https://user-images.githubusercontent.com/87427105/162942976-31e4c9be-6231-4fad-be7b-b53a1f16bed7.png)
+
 - Menu
 - About
 - Cart
