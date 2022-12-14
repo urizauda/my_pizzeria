@@ -1,6 +1,6 @@
 # My Pizzeria - food ordering app
 
-link to the app - https://my-pizzeria.herokuapp.com
+link to the app - https://my-pizzeria.herokuapp.com<br>
 Pizza ordering app created with an emphasis on user interactive and design.
 
 ## Introduction
