@@ -13,7 +13,6 @@ body {
     align-content: flex-start;
     height: 90vh;
     margin-top: 1.7rem;
-    /* background-color: rgba(0, 0, 0, 0.76); */
     background-color: #605954;
     padding: 2px;
 }
@@ -97,11 +96,6 @@ body {
     border-radius: 50%;
 }
 
-/* .img:hover {
-    width: 100%;
-    height: 100%;
-} */
-
 .imgMedium {
     border-radius: 50%;
     width: 13rem;
@@ -180,4 +174,8 @@ h1 {
 .orderNowBtn:hover {
     transform: scale(1.25);
     font-weight: 500;
+}
+
+.spinner {
+    margin-left: 48%;
 }

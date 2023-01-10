@@ -7,7 +7,8 @@ import styles from '../css/homePage.module.css'
 
 export default function HomePage({ errorFromServer, setErrorFromServer, loading, setLoading }) {
     const [image, setImage] = useState([])
-    useEffect(getSlider, [])
+    
+    useEffect(getSlider, [setErrorFromServer, setLoading])
 
     function getSlider() {
         setLoading(true)
@@ -24,7 +25,7 @@ export default function HomePage({ errorFromServer, setErrorFromServer, loading,
         ? image.map((img, i) => {
             return (
                 <figure key={i}>
-                    <img src={img.img} />
+                    <img src={img.img} alt="slider" />
                 </figure>
             )
         }) : []

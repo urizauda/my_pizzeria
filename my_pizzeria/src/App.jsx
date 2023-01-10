@@ -71,7 +71,7 @@ function App() {
         <br></br><br></br>
         <Switch>
           <Route exact path="/" render={() => <HomePage errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} />} />
-          <Route exact path="/Menu" render={() => <Menu setErrorFromServer={setErrorFromServer} setLoading={setLoading} products={products} auth={auth} setAuth={setAuth} setProducts={setProducts} />} />
+          <Route exact path="/Menu" render={() => <Menu setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} products={products} auth={auth} setAuth={setAuth} setProducts={setProducts} />} />
           <Route exact path="/Register" render={() => <Register counter={counter} setAuth={setAuth} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} email={email} setEmail={setEmail} password={password} setPassword={setPassword} redirect={redirect} setRedirect={setRedirect} />} />
           <Route exact path="/Login" render={() => <Login counter={counter} setCounter={setCounter} products={products} setAuth={setAuth} setProducts={setProducts} errorFromServer={errorFromServer} setErrorFromServer={setErrorFromServer} loading={loading} setLoading={setLoading} email={email} setEmail={setEmail} password={password} setPassword={setPassword} redirect={redirect} setRedirect={setRedirect} />} />
           <Route exact path="/About" render={() => <About />} />
